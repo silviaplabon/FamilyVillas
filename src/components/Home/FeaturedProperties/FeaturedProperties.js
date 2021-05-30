@@ -7,7 +7,7 @@ import FeaturedPropertiesDetail from '../FeaturedPropertiesDetail/FeaturedProper
 const FeaturedProperties = () => {
     const [properties,setProperties]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:4300/apartmentData')
+        fetch('https://safe-reaches-28400.herokuapp.com/apartmentData')
             .then(res => res.json())
             .then(data => {
                 setProperties(data)

@@ -8,7 +8,7 @@ const FeaturedPropertiesDetail = (props) => {
     const history=useHistory();
     const { name, image, location, bed, size, price, bathroom,_id } = props.property;
     // useEffect(()=>{
-    //     fetch(` http://localhost:4300/addApartment`, {
+    //     fetch(` https://safe-reaches-28400.herokuapp.com/addApartment`, {
     //         method: 'POST',
     //         headers: {
     //             'content-type': 'application/json'

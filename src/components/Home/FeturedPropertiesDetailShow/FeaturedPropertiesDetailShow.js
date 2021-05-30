@@ -5,7 +5,8 @@ import AgentShow from '../AgentShow/AgentShow'
 import FeaturedPropertiesDetail from '../FeaturedPropertiesDetail/FeaturedPropertiesDetail'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faBed, faBath, faBuilding, faHeart, faCartPlus } from '@fortawesome/free-solid-svg-icons'
-
+import {useDispatch} from 'react-redux'
+import { addToWishList } from '../../../redux/actions/apartmentAction';
 
 const FeaturedPropertiesDetailShow = () => {
     const { id } = useParams();
@@ -33,7 +34,7 @@ const FeaturedPropertiesDetailShow = () => {
     ]
     const [apartmentData, setApartmentData] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:4300/apartmentSpecificData/${id}`)
+        fetch(`https://safe-reaches-28400.herokuapp.com/apartmentSpecificData/${id}`)
             .then(res => res.json())
             .then(data => {
                 setApartmentData(data)
@@ -41,9 +42,10 @@ const FeaturedPropertiesDetailShow = () => {
     }, [id])
     const { name, image, price, dining, wash, kitchen, location, size, bed, bathroom } = apartmentData;
 
+     const dispatch = useDispatch()
 
     useEffect(() => {
-        fetch('http://localhost:4300/apartmentData')
+        fetch('https://safe-reaches-28400.herokuapp.com/apartmentData')
             .then(res => res.json())
             .then(data => {
                 setProperties(data)
@@ -127,7 +129,7 @@ const FeaturedPropertiesDetailShow = () => {
                 <div className="col-md-5 col-sm-12  mt-5">
                     <div className="">
                         <button className="order btn orderwishBtn"><FontAwesomeIcon className="me-1" icon={faCartPlus} />Order</button>
-                        <button className="order btn orderwishBtn ms-2"> <FontAwesomeIcon className="me-1" icon={faHeart} />Wish</button>
+                        <button onClick={()=>dispatch(addToWishList(apartmentData))} className="order btn orderwishBtn ms-2"> <FontAwesomeIcon className="me-1" icon={faHeart} />Wish</button>
                     </div>
                     <div className="">
                         <h5 className="fs-3 mt-4">CONTACT US</h5>
