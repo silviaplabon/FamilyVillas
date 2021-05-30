@@ -16,3 +16,9 @@ export const addToOrderList = (payload)=>{
         payload
     }
 }
+export const removeFromOrderList = (payload) => {
+    return {
+        type:'REMOVE_FROM_ORDER_LIST',
+        payload
+    }
+}

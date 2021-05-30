@@ -10,7 +10,7 @@ const NavBar = () => {
                 <Navbar expand="lg">
                     <Navbar.Brand>
                         <div className='navbarBrands'>
-                            <h3>AmarApartment</h3>
+                            <h3>Ample Apartment</h3>
                         </div>
                     </Navbar.Brand>
                     <Navbar.Toggle style={{background:'#ffffff9e'}} aria-controls="basic-navbar-nav" />
@@ -20,6 +20,8 @@ const NavBar = () => {
                             <Nav.Link as={Link} to='/about'>About</Nav.Link>
                             <Nav.Link as={Link} to='/agents'>Agents</Nav.Link>
                             <Nav.Link as={Link} to='/apartment'>Apartment</Nav.Link>
+                            <Nav.Link as={Link} to='/cart'>Cart</Nav.Link>
+
                             <Nav.Link className='logInBtn' as={Link} to='/login'><span>logIn</span></Nav.Link>
                             <Nav.Link className='signUpBtn' as={Link} to='/signUp'><span style={{color:'white'}} >Sign Up</span></Nav.Link>
                         </Nav>

@@ -17,6 +17,7 @@ import Login from './components/Shared/Login/Login'
 import PrivateRoute from './components/Shared/PrivateRoute/PrivateRoute';
 import OrderList from './components/Admin/OrderList/OrderList';
 import BookingList from './components/User/BookingList/BookingList';
+import Book from './components/User/Book/Book';
 export const UserContext = createContext();
 
 function App() {
@@ -40,9 +41,13 @@ function App() {
           <PrivateRoute path="/admin/orderList">
             <OrderList></OrderList>
           </PrivateRoute>
+          <PrivateRoute path="/cart">
+            <Book></Book>
+          </PrivateRoute>
           <PrivateRoute path="/bookingsList">
             <BookingList></BookingList>
           </PrivateRoute>
+          
           <Route path="*">
             <NoMatch></NoMatch>
           </Route>

@@ -17,7 +17,7 @@ const FeaturedProperties = () => {
 
     return (
         <div className="container mt-5 ">
-            <h3 className="">Featured Apartments</h3>
+            <h2 className="text-center text-primary fw-bolder">Featured Apartments</h2>
         <div className="row  row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 ">
             {
                 propertiesData?.map(property=><FeaturedPropertiesDetail property={property}></FeaturedPropertiesDetail>)

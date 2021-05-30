@@ -21,7 +21,7 @@ const FeaturedPropertiesDetail = (props) => {
     }
 
     return (
-        <div className="col" >
+        <div className="col mt-5" >
             <div className="card h-100 cardFeature shadow">
                 <div className="imageFeaturedProperties" style={{ height: '55%' }}>
                     <img src={image} className="h-100 w-100" alt="..."  />
