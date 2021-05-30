@@ -7,7 +7,6 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Testimonial from '../Testimonial/Testimonial';
 
-
 const Home = () => {
     return (
         <>

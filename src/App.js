@@ -1,19 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import React, { createContext, useContext, useEffect, useState } from "react";
-
+import React, { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
+  Route, Switch
 } from "react-router-dom";
+import FeaturedPropertiesDetailShow from './components/Home/FeturedPropertiesDetailShow/FeaturedPropertiesDetailShow';
 import Home from "./components/Home/Home/Home";
 import NoMatch from "./components/Home/NoMatch/NoMatch";
-import FeaturedPropertiesDetailShow from './components/Home/FeturedPropertiesDetailShow/FeaturedPropertiesDetailShow'
-import Login from './components/Shared/Login/Login'
+import Login from './components/Shared/Login/Login';
 import PrivateRoute from './components/Shared/PrivateRoute/PrivateRoute';
 import OrderList from './components/Admin/OrderList/OrderList';
 import BookingList from './components/User/BookingList/BookingList';
