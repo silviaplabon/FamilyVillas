@@ -5,6 +5,7 @@ import ExploreByCities from '../ExploreByCities/ExploreByCities';
 import FeaturedProperties from '../FeaturedProperties/FeaturedProperties';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import Testimonial from '../Testimonial/Testimonial';
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
          <FeaturedProperties></FeaturedProperties>
          <ExploreByCities></ExploreByCities>
          <Agents></Agents>
+         <Testimonial></Testimonial>
          <Footer></Footer>
         </>
     );
