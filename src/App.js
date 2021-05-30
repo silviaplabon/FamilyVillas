@@ -13,24 +13,29 @@ import {
 
 import Home from "./components/Home/Home/Home";
 import NoMatch from "./components/Home/NoMatch/NoMatch";
+import FeaturedPropertiesDetailShow from './components/Home/FeturedPropertiesDetailShow/FeaturedPropertiesDetailShow'
+
 
 
 function App() {
   return (
     <Router>
-        <Switch>
+      <Switch>
         <Route exact path="/">
           <Home></Home>
         </Route>
         <Route path="/home">
           <Home></Home>
         </Route>
+      
+        <Route exact path="/apartment/feature/:id">
+          <FeaturedPropertiesDetailShow></FeaturedPropertiesDetailShow>
+        </Route>
         <Route path="*">
-            <NoMatch></NoMatch>
-         </Route>
+          <NoMatch></NoMatch>
+        </Route>
       </Switch>
     </Router>
-
   );
 }
 
