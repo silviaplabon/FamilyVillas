@@ -1,0 +1,18 @@
+.bannerTitle{
+    color: #1D1436;
+    font-family: "Muli", Sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1em;
+}
+.bannerBtn{
+    background: #fd592d;
+    color:white !important;
+    font-size:1.3rem;
+    font-weight: 600;
+    transition: all 0.4s;
+}
+.bannerBtn:hover{
+    background: #54bfc9;
+    transform: scale(0.95);
+}
