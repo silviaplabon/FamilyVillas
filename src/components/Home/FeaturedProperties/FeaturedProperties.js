@@ -7,7 +7,7 @@ import FeaturedPropertiesDetail from '../FeaturedPropertiesDetail/FeaturedProper
 const FeaturedProperties = () => {
     const [properties,setProperties]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:4300/apartmentData')
+        fetch('https://safe-reaches-28400.herokuapp.com/apartmentData')
             .then(res => res.json())
             .then(data => {
                 setProperties(data)
@@ -16,8 +16,9 @@ const FeaturedProperties = () => {
  let propertiesData = properties?.sort(() => Math.random() - Math.random()).slice(0, 6);
 
     return (
-        <div className="container ">
-        <div className="row  row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mx-5">
+        <div className="container mt-5 ">
+            <h3 className="">Featured Apartments</h3>
+        <div className="row  row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 ">
             {
                 propertiesData?.map(property=><FeaturedPropertiesDetail property={property}></FeaturedPropertiesDetail>)
             }

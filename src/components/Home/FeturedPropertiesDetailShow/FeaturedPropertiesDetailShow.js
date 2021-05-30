@@ -33,7 +33,7 @@ const FeaturedPropertiesDetailShow = () => {
     ]
     const [apartmentData, setApartmentData] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:4300/apartmentSpecificData/${id}`)
+        fetch(`https://safe-reaches-28400.herokuapp.com/apartmentSpecificData/${id}`)
             .then(res => res.json())
             .then(data => {
                 setApartmentData(data)
@@ -43,7 +43,7 @@ const FeaturedPropertiesDetailShow = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:4300/apartmentData')
+        fetch('https://safe-reaches-28400.herokuapp.com/apartmentData')
             .then(res => res.json())
             .then(data => {
                 setProperties(data)
@@ -76,38 +76,42 @@ const FeaturedPropertiesDetailShow = () => {
                 </div>
             </div>
             {/* Image section end */}
+
+
             <div className="row">
-                <div className="col-md-7 col-sm-12 ">
+                <div className="col-md-7 col-sm-12 p-0">
                     <h4 className="fs-2">{name}</h4>
-                    <div className="">
-                        <h4 className="">${price}.00</h4>
-                        <div className="row  ">
-                            <div className="col-md-4  mt-2 card shadow">
-                                <h6 className="py-1 px-0 text-center">{location}</h6>
-                                <p className="text-center">Lower East Side</p>
-                            </div>
-                            <div className="col-md-7 mt-2  ms-3 card shadow ">
-                                <div className="row ">
-                                    <div className="row row-cols-3  ">
-                                        <div className="col p-1" >
-                                            <FontAwesomeIcon className="mt-1  iconFeatureProperties" icon={faBed} /><br />
-                                            <p className="text-center h6FeatureType">{bed}room</p>
-                                        </div>
-                                        <div className="col p-1">
-                                            <FontAwesomeIcon className=" iconFeatureProperties" icon={faBath} />
-                                            <br /><p className="text-center h6FeatureType">{bathroom} bath</p>
-                                        </div>
-                                        <div className="col p-1">
-                                            <FontAwesomeIcon className=" iconFeatureProperties" icon={faBuilding} /><br />
-                                            <p className="text-center h6FeatureType">{size}sq.pt</p>
-                                        </div>
 
-                                    </div>
-
-                                </div>
+                    <h4 className="">${price}.00</h4>
+                    <div className="row ">
+                        <div className="col-md-4 col-sm-4 col-4 mt-2p-0">
+                            <div className=" card shadow ">
+                                 <h6 className="text-center">{location}</h6>
+                            <p className="text-center py-1">Lower East Side</p>
                             </div>
                         </div>
+                        <div className="col-md-1 col-sm-1 col-1">
+                        </div>
+                        <div className="col-md-7 col-sm-7 col-7 row  card shadow p-0">
+                                <div className="row row-cols-3   ">
+                                    <div className="col p-0 d-flex flex-column justify-content-center align-items-center" >
+                                        <FontAwesomeIcon className="mt-1 iconFeatureProperties" icon={faBed} />
+                                        <p className=" h6FeatureType">{bed}room</p>
+                                    </div>
+
+                                    <div className="col p-0 d-flex flex-column justify-content-center align-items-center " style={{borderLeft:'1px solid black'}}>
+                                        <FontAwesomeIcon className="iconFeatureProperties" icon={faBath} />
+                                       <p className=" h6FeatureType">{bathroom} bath</p>
+                                    </div>
+                                    <div className="col p-0 d-flex flex-column justify-content-center align-items-center" style={{borderLeft:'1px solid black'}}>
+                                        <FontAwesomeIcon className="iconFeatureProperties" icon={faBuilding} />
+                                        <p className=" h6FeatureType">{size}sq.pt</p>
+                                    </div>
+                                </div>
+                        </div>
                     </div>
+                    {/* end Card  */}
+
                     <div className="mt-5">
                         <h5 className="fs-2">Description:</h5>
                         <p>We designed your  {name} with “comfort  enhancing” features. It is our goal to provide the best and highest value apartment living you can find.</p>
@@ -124,7 +128,11 @@ const FeaturedPropertiesDetailShow = () => {
                     </div>
 
                 </div>
-                <div className="col-md-5 col-sm-12  mt-5">
+                <div className="col-md-1">
+
+                </div>
+
+                <div className="col-md-4  col-sm-12  mt-5">
                     <div className="">
                         <button className="order btn orderwishBtn"><FontAwesomeIcon className="me-1" icon={faCartPlus} />Order</button>
                         <button className="order btn orderwishBtn ms-2"> <FontAwesomeIcon className="me-1" icon={faHeart} />Wish</button>

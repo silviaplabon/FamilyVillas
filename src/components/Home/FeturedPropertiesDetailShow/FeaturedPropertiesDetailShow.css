@@ -27,12 +27,12 @@
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width:1200px) {
-    /* .iconFeatureProperties {
-        font-size: 16px!important;
+    .iconFeatureProperties {
+        font-size: 20px!important;
     }
     .h6FeatureType {
         font-size: 14px!important;
-    } */
+    }
     .mainImage {
         height: 400px!important;
     }
@@ -48,12 +48,8 @@
 }
 
 @media only screen and (min-device-width: 576px) and (max-device-width:767px) {
-    .iconFeatureProperties {
-        font-size: 20px!important;
-    }
-    .h6FeatureType {
-        font-size: 14px!important;
-    }
+  
+  
     .mainImage {
         height: 320px!important;
     }
@@ -69,6 +65,12 @@
 }
 
 @media only screen and (min-device-width: 350px) and (max-device-width:575px) {
+    .iconFeatureProperties {
+        font-size: 20px!important;
+    }
+    .h6FeatureType {
+        font-size: 14px!important;
+    }
     .mainImage {
         height: 300px!important;
     }

@@ -27,7 +27,6 @@ function App() {
         <Route path="/home">
           <Home></Home>
         </Route>
-      
         <Route exact path="/apartment/feature/:id">
           <FeaturedPropertiesDetailShow></FeaturedPropertiesDetailShow>
         </Route>

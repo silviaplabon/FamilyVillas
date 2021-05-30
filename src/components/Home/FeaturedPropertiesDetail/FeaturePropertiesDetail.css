@@ -3,11 +3,11 @@
 }
 
 .cardFeature {
-    border-radius: 0.75rem!important;
+    border-radius: 1rem!important;
 }
 
-.imageFeaturedProperties {
-    border-radius: 0.75rem!important;
+.imageFeaturedProperties img {
+    border-radius: 1rem!important;
 }
 
 @media only screen and (min-device-width: 992px) and (max-device-width:1199px) {
