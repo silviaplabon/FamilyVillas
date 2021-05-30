@@ -1,0 +1,101 @@
+.marginFeaturedProperties {
+    margin-left: 40px;
+}
+
+.cardFeature {
+    border-radius: 1rem!important;
+}
+
+.imageFeaturedProperties img {
+    border-radius: 1rem!important;
+}
+
+@media only screen and (min-device-width: 992px) and (max-device-width:1199px) {
+    .marginFeaturedProperties {
+        margin-left: 25px!important;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width:991px) {
+    .marginFeaturedProperties {
+        margin-left: 25px!important;
+    }
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width:400px) {
+    .imageFeaturedProperties {
+        height: 40%!important;
+    }
+    .cardBodyFeaturedProperties {
+        padding: 0px!important;
+        margin: 0 5px!important;
+    }
+    .h5FeaturedProperties {
+        font-size: 14px!important;
+    }
+    .pFeaturedProperties {
+        font-size: 14px!important;
+    }
+    .attributeFeaturedProperties {
+        width: 30%!important;
+    }
+    .marginFeaturedProperties {
+        margin: 0!important;
+    }
+    .marginSizeFeature {
+        width: 40%!important;
+    }
+}
+
+.imageFeaturedProperties {
+    position: relative;
+}
+
+/* Style the button and place it in the middle of the container/image */
+
+.imageFeaturedProperties .OrderBtn1 {
+    position: absolute;
+    top: 19%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: black;
+    background-color: #fd592d;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.imageFeaturedProperties .OrderBtn2 {
+    position: absolute;
+    top: 19%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #41adb7;
+    color: black;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.container .OrderBtn1:hover, .OrderBtn2:hover {
+   
+}
+
+@media only screen and (min-device-width: 1200px) and (max-device-width:1399px) {
+    .OrderBtn2 {
+        left: 34%!important;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width:1199px) {
+    .OrderBtn2 {
+        left: 25%!important;
+    }
+}

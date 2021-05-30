@@ -1,0 +1,101 @@
+.mainImage {
+    height: 500px!important;
+}
+
+.diningImg {
+    height: 500px!important;
+}
+
+.washImg {
+    height: 248px!important;
+}
+
+.kitchenImg {
+    height: 248px!important;
+}
+
+.liFeatureProperties {
+    list-style-type: square;
+}
+
+.iconFeatureProperties {
+    font-size: 33px!important;
+}
+
+.orderwishBtn {
+    border: 1px solid greenyellow;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width:1200px) {
+    .iconFeatureProperties {
+        font-size: 20px!important;
+    }
+    .h6FeatureType {
+        font-size: 14px!important;
+    }
+    .mainImage {
+        height: 400px!important;
+    }
+    .diningImg {
+        height: 400px!important;
+    }
+    .washImg {
+        height: 198px!important;
+    }
+    .kitchenImg {
+        height: 198px!important;
+    }
+}
+
+@media only screen and (min-device-width: 576px) and (max-device-width:767px) {
+  
+  
+    .mainImage {
+        height: 320px!important;
+    }
+    .diningImg {
+        height: 320px!important;
+    }
+    .washImg {
+        height: 157.5px!important;
+    }
+    .kitchenImg {
+        height: 157.5px!important;
+    }
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width:575px) {
+    .iconFeatureProperties {
+        font-size: 20px!important;
+    }
+    .h6FeatureType {
+        font-size: 14px!important;
+    }
+    .mainImage {
+        height: 300px!important;
+    }
+    .diningImg {
+        height: 300px!important;
+    }
+    .washImg {
+        height: 147.5px!important;
+    }
+    .kitchenImg {
+        height: 147.5px!important;
+    }
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width:349px) {
+    .mainImage {
+        height: 240px!important;
+    }
+    .diningImg {
+        height: 240px!important;
+    }
+    .washImg {
+        height: 117.5px!important;
+    }
+    .kitchenImg {
+        height: 117.5px!important;
+    }
+}

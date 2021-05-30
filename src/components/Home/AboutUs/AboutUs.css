@@ -1,0 +1,20 @@
+.about{
+    height: 500px;
+}
+.title{
+    font-size: 20px;
+}
+.iconUsed, .numberCount{
+    font-size: 2em;
+    color: red;
+}
+.btmMargin{
+    margin-top: 6%;
+}
+/* .numberCount */
+  @media only screen and (max-width: 992px){ */
+    .companyImage{
+        width: 100% !important;
+    }
+    
+} 
