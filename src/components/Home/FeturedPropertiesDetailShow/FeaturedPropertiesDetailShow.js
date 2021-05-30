@@ -5,7 +5,8 @@ import AgentShow from '../AgentShow/AgentShow'
 import FeaturedPropertiesDetail from '../FeaturedPropertiesDetail/FeaturedPropertiesDetail'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faBed, faBath, faBuilding, faHeart, faCartPlus } from '@fortawesome/free-solid-svg-icons'
-
+import {useDispatch} from 'react-redux'
+import { addToWishList } from '../../../redux/actions/apartmentAction';
 
 const FeaturedPropertiesDetailShow = () => {
     const { id } = useParams();
@@ -41,6 +42,7 @@ const FeaturedPropertiesDetailShow = () => {
     }, [id])
     const { name, image, price, dining, wash, kitchen, location, size, bed, bathroom } = apartmentData;
 
+     const dispatch = useDispatch()
 
     useEffect(() => {
         fetch('https://safe-reaches-28400.herokuapp.com/apartmentData')
@@ -135,7 +137,7 @@ const FeaturedPropertiesDetailShow = () => {
                 <div className="col-md-4  col-sm-12  mt-5">
                     <div className="">
                         <button className="order btn orderwishBtn"><FontAwesomeIcon className="me-1" icon={faCartPlus} />Order</button>
-                        <button className="order btn orderwishBtn ms-2"> <FontAwesomeIcon className="me-1" icon={faHeart} />Wish</button>
+                        <button onClick={()=>dispatch(addToWishList(apartmentData))} className="order btn orderwishBtn ms-2"> <FontAwesomeIcon className="me-1" icon={faHeart} />Wish</button>
                     </div>
                     <div className="">
                         <h5 className="fs-3 mt-4">CONTACT US</h5>
