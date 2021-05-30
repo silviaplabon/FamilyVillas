@@ -1,11 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { UserContext } from '../../App';
+import { UserContext } from '../../../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import './Login.css'
 import { facebookSignIn, googleSignIn, inititliazeLoginFramework, signOut, signIn, signUp, githubSignIn, updateUsername, storeAuthToken } from './Loginmanager';
-import Header from '../Header/Header';
 import { useForm } from 'react-hook-form';
 
 const Login = () => {
