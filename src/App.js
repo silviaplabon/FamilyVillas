@@ -35,6 +35,9 @@ function App() {
           <Route exact path="/login">
             <Login></Login>
           </Route>
+          <Route exact path="/signUp">
+            <Login></Login>
+          </Route>
           <PrivateRoute exact path="/apartment/feature/:id">
             <FeaturedPropertiesDetailShow></FeaturedPropertiesDetailShow>
           </PrivateRoute>

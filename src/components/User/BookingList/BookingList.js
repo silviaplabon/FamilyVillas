@@ -24,16 +24,23 @@ const BookingList = () => {
             <div className="col-md-3">
                 <UserSideBar></UserSideBar>
             </div>
-            <div className="col-md-8 bg-light">
-                <div className="">
-                    <h5 className="text-center my-5">Showing orders of: {loggedInUser.email}</h5>
-                    <div className="row">
-                        {
-                            bookings.map(booking => <BookingListView booking={booking}></BookingListView>)
-                        }
-                    </div>
-                </div>
+            <div className="col-md-8 mt-5 py-5">
+                <h5 className="text-center my-5">Showing orders of: {loggedInUser.email}</h5>
+                <table class="table table-striped table-hover table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Apartment Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Location</th>
+                        </tr>
+                    </thead>
+                    {
+                        bookings.map(booking => <BookingListView booking={booking}></BookingListView>)
+                    }
+                </table>
             </div>
+            
         </section>
     );
 };

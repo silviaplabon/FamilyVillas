@@ -33,6 +33,13 @@ const apartmentReducer = (state = initialList, action) => {
             }
             return newState;
         }
+        case 'EMPTY_ORDER_LIST': {
+            const newState = {
+                bookingList: []
+            }
+            return newState;
+        }
+        
         default: {
             return state;
         }

@@ -22,3 +22,9 @@ export const removeFromOrderList = (payload) => {
         payload
     }
 }
+export const emptyOrderList = (payload) => {
+    return {
+        type:'EMPTY_ORDER_LIST',
+        payload
+    }
+}

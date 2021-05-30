@@ -58,8 +58,10 @@ const FeaturedPropertiesDetailShow = () => {
     }, [])
     let propertiesData = properties?.sort(() => Math.random() - Math.random()).slice(0, 3);
     return (
-        <div className="container mt-5">
-            <NavBar></NavBar>
+        <>
+        <NavBar/>
+        <div className="container">
+            
             <div className="row">
                 <div className=" col-8 col-md-9 col-sm-8">
                     <div className="row ">
@@ -142,7 +144,7 @@ const FeaturedPropertiesDetailShow = () => {
 
                 <div className="col-md-4  col-sm-12  mt-5">
                     <div className="">
-                        <button onClick={() => dispatch(addToOrderList(apartmentData))} className="order btn orderwishBtn"><FontAwesomeIcon className="me-1" icon={faCartPlus} />Order</button>
+                        <button onClick={() => dispatch(addToOrderList(apartmentData))} className="btn btn-warning mx-2"><FontAwesomeIcon className="me-1" icon={faCartPlus} />Order</button>
                         <button onClick={() => dispatch(addToWishList(apartmentData))} className="btn btn-primary ms-2"> <FontAwesomeIcon className="me-1" icon={faHeart} />Wish</button>
                     </div>
                     <div className="">
@@ -173,6 +175,7 @@ const FeaturedPropertiesDetailShow = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

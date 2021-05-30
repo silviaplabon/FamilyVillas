@@ -6,17 +6,17 @@ import UserSideBar from '../UserSideBar/UserSideBar'
 import BookView from './BookView';
 import { useSelector } from 'react-redux';
 const Book = () => {
-    const bookings = useSelector((state)=>{
-        
+    const bookings = useSelector((state) => {
+
         return state.apartments.bookingList
     });
-    
-    
+
+
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    
+
     let history = useHistory();
-   
-    
+
+
     const placeOrder = () => {
         const orderDetails = {
             ...loggedInUser,
@@ -43,28 +43,30 @@ const Book = () => {
 
     return (
         <section>
-            
+
             <div className="row w-100">
                 <div className="col-md-3">
                     <UserSideBar></UserSideBar>
                 </div>
                 <div className="col-md-8 mt-5 py-5">
-                <table class="table table-striped table-hover table-responsive-sm">
-                    <thead>
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Size</th>
-                            <th scope="col">Location</th>
-                            
-                        </tr>
-                    </thead>
+                    <table class="table table-striped table-hover table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Size</th>
+                                <th scope="col">Location</th>
+
+                            </tr>
+                        </thead>
+                        {
+                            bookings.map(booking => <BookView booking={booking}></BookView>)
+                        }
+                    </table>
                     {
-                        bookings.map(booking => <BookView booking={booking}></BookView>)
+                       bookings && <button onClick={placeOrder} className="text-center btn-lg btn-warning">Place Order</button>
                     }
-                </table>
-                <button onClick={placeOrder()} className="text-center btn-lg btn-warning">Place Order</button>
-            </div>
+                </div>
             </div>
         </section>
     );

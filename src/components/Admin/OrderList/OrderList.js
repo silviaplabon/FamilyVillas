@@ -24,6 +24,7 @@ const OrderList = () => {
             <div className="col-md-3">
                 <Sidebar></Sidebar>
             </div>
+            
             <div className="col-md-8 mt-5 py-5">
                 <table class="table table-striped table-hover table-responsive-sm">
                     <thead>
