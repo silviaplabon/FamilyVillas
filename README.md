@@ -21,11 +21,3 @@
 - React animate on scroll etc.
 
 
-site Link:
-```sh
-https://ample-apartment.web.app/
-```
-Api Link:
-```sh
-https://safe-reaches-28400.herokuapp.com/
-```
