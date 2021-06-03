@@ -5,18 +5,9 @@ import './FeaturePropertiesDetail.css'
 import { useHistory } from 'react-router';
 
 const FeaturedPropertiesDetail = (props) => {
-    const history=useHistory();
-    const { name, image, location, bed, size, price, bathroom,_id } = props.property;
-    // useEffect(()=>{
-    //     fetch(` https://safe-reaches-28400.herokuapp.com/addApartment`, {
-    //         method: 'POST',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(props.property)
-    //     })
-    // },[props.property])
-    const handleDetailsApartment=(_id)=>{
+    const history = useHistory();
+    const { name, image, location, bed, size, price, bathroom, _id } = props.property;
+    const handleDetailsApartment = (_id) => {
         history.push(`/apartment/feature/${_id}`)
     }
 
@@ -24,9 +15,8 @@ const FeaturedPropertiesDetail = (props) => {
         <div className="col mt-5" >
             <div className="card h-100 cardFeature shadow">
                 <div className="imageFeaturedProperties" style={{ height: '55%' }}>
-                    <img src={image} className="h-100 w-100" alt="..."  />
-                    <button className="OrderBtn1 btn-primary" onClick={()=>handleDetailsApartment(_id)}>Feature</button>
-                    <button className="OrderBtn2 btn-outline">Sales</button>
+                    <img src={image} className="h-100 w-100" alt="..." />
+
 
                 </div>
 
@@ -40,10 +30,15 @@ const FeaturedPropertiesDetail = (props) => {
 
                     </div>
                 </div>
-                <div className="priceFeaturedProperties" style={{ height: '10%' }}>
+                <div className="priceFeaturedProperties mb-1" style={{ height: '12%' }}>
                     <hr className="m-auto w-75"></hr>
-                    <h6 className="text-center mt-0">${price}</h6>
+                    <div className="d-flex justify-content-between align-items-between mx-4 mt-1 mb-1">
+                        <h6 className="text-center mt-0">${price}</h6>
+                        <button className="OrderBtn1 btn-primary" onClick={() => handleDetailsApartment(_id)}>Feature</button>
+                    </div>
+
                 </div>
+
             </div>
         </div>
     );

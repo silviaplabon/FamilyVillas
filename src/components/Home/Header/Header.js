@@ -6,7 +6,7 @@ import './Header.css';
 const Header = () => {
     return (
         <div>
-            <div className='headerBg'>
+            <div className='headerBg '>
                 <div className='childHeaderBg'>
                     <NavBar/>
                     <TopBanner/>

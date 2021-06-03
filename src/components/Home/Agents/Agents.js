@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
 import AgentsCard from '../AgentsCard/AgentsCard';
-const agentsData = [
+export const agentsData = [
     {
         id:'011',
         img:'https://i.ibb.co/t86VWBX/inhom022.jpg',

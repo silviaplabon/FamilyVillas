@@ -1,9 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyD1xViMYMtMI6zZN2zdcwmUk8nIultApwU",
-  authDomain: "ample-apartment.firebaseapp.com",
-  projectId: "ample-apartment",
-  storageBucket: "ample-apartment.appspot.com",
-  messagingSenderId: "267647945438",
-  appId: "1:267647945438:web:997ffe80ec9e3c72a5d04f"
+
+    apiKey: "AIzaSyCtrJ_4B9t_3wZQpT1o-fckyEydBidx68E",
+    authDomain: "family-villas.firebaseapp.com",
+    projectId: "family-villas",
+    storageBucket: "family-villas.appspot.com",
+    messagingSenderId: "884502365253",
+    appId: "1:884502365253:web:c7915345687f895f59cf2c"
 };
 export default firebaseConfig;

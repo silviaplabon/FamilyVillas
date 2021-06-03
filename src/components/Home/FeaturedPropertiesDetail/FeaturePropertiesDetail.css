@@ -50,9 +50,20 @@
 .imageFeaturedProperties {
     position: relative;
 }
+.OrderBtn1 {
+    color: black;
+    background-color: #fd592d;
+    font-size: 16px;
+    padding: 4px 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
 
 /* Style the button and place it in the middle of the container/image */
-
+/* 
 .imageFeaturedProperties .OrderBtn1 {
     position: absolute;
     top: 19%;
@@ -98,4 +109,4 @@
     .OrderBtn2 {
         left: 25%!important;
     }
-}
+} */
